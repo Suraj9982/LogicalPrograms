@@ -9,7 +9,7 @@ namespace LogicalProgramsComputation
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("CHOOSE ONE OPTION\n1.Fibonacci Series\n2.Perfect Number\n3.PrimeNumbers\n4.Reverse NUmber\n5.Coupon Numbers\n6.Exit");
+                Console.WriteLine("CHOOSE ONE OPTION\n1.Fibonacci Series\n2.Perfect Number\n3.PrimeNumbers\n4.Reverse NUmber\n5.Coupon Numbers\n6.Stopwatch Simulate\n7.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -49,10 +49,14 @@ namespace LogicalProgramsComputation
                         break;
 
                     case 6:
+                        StopWatch sw = new StopWatch();
+                        sw.StopwatchSimulate();
+                        break;
+                    case 7:
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("your choice should be between 1 to 6");
+                        Console.WriteLine("your choice should be between 1 to 7");
                         break;
                        
                 }
