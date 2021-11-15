@@ -9,7 +9,7 @@ namespace LogicalProgramsComputation
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("CHOOSE ONE OPTION\n1.Fibonacci Series\n2.Perfect Number\n3.PrimeNumbers\n4.Reverse NUmber\n5.Exit");
+                Console.WriteLine("CHOOSE ONE OPTION\n1.Fibonacci Series\n2.Perfect Number\n3.PrimeNumbers\n4.Reverse NUmber\n5.Coupon Numbers\n6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -41,11 +41,18 @@ namespace LogicalProgramsComputation
                         int num = Convert.ToInt32(Console.ReadLine());
                         rev.ReversetheNumber(num);
                         break;
-                    case 5:
+                    case 5 :
+                        CouponNumbers coupon = new CouponNumbers();
+                        Console.WriteLine("how many coupon number you want to genrate");
+                        int Num = Convert.ToInt32(Console.ReadLine());
+                        coupon.Calculation(Num);
+                        break;
+
+                    case 6:
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("your choice should be between 1 to 5");
+                        Console.WriteLine("your choice should be between 1 to 6");
                         break;
                        
                 }
